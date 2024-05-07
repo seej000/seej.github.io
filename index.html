@@ -96,6 +96,114 @@
                 There are no significant impediments or points for improvement. While thinking of time constraints, I will continue exploring related fields this week.
             </p>
         </section>
+
+        <section id="update">
+            <h2>Week 7</h2>
+            <p>
+                Last week, I focused on learning the basics of Rust.
+                I learned that it is a systems programming language known for memory safety and very high speed. It offers low-level control similar to C or C++, while adopting modern syntax and programming paradigms, making it quite comfortable to write in. I also discovered that Rust has a very appealing feature of being able to detect errors of concurrency at compile time. This has made me feel more inclined to commit to Rust over Go in the future.
+                I completed the Udemy course "Introduction to Rust Programming" (udemy.com/course/rust-os-system) last week and thought I had understood the basics sufficiently. However, when I tried to learn about the Tokio library, which handles Rust's concurrency, on LinkedIn Learning, I realized that while I could understand the theory, I was not yet proficient in the basic Rust syntax. I could not follow what the code in the videos was precisely trying to do and quickly fell behind.
+                Therefore, to reinforce my foundations of Rust, I began watching "Rust for Data Engineering" on LinkedIn Learning. This course is designed for learners who already have an intermediate understanding of Python and know the bare minimum of Rust's language specifications. It reviews basic Rust data structures (such as vector, linked list and hashmap) and provides an introduction to data engineering with Rust. The level feels just right to me. "CSPB2270 Data Structures" proves to be helpful.
+                Next week, I plan to continue with "Rust for Data Engineering". Additionally, I have to review Go's concurrency, as originally planned.
+                I wouldn't call it an obstacle, but as I progress in my learning, I find Rust to be more interesting than Go. If possible, I may need to consider changing my original plan. Moreover, it has been decided that I will be traveling to India on a business trip for a week the week after next, so I need to work even harder next week to advance my studies beforehand.
+                I don't have any particular improvements to suggest regarding my approach to learning.
+            </p>
+        </section>
+
+        <section id="update">
+            <h2>Week 8</h2>
+            <p>
+                From what I saw on Moodle, this week only requires a Project Update Report, and it's not clear if a Weekly update is necessary, but just in case, I'll make a post.
+                Last week, I reviewed the basic syntax and patterns of concurrency in Go and Rust. I feel that the time has come to move beyond foundational learning through videos and copying code, and to start learning through practical projects.
+                This week, as I wrote in the Project Update Report, I will be working on a mini-project in Rust, which allows for a deeper exploration of concurrency.
+                The challenge, though not impediment, is the constraint of time. With exams, assignments and work at the fiscal year-end, it's barely possible to carve out a minimum of four hours. There are no particular improvements to be made for the future.
+            </p>
+        </section>
+
+        <section id="update">
+            <h2>Week 9</h2>
+            <p>
+                Last week, I was considering the direction and technology stack for a mini project on concurrency using Rust. The original plan was to build a RESTful API HTTP server in Go. Last week, I confirmed that this could also be built in Rust. However, I'm thinking that working on the client side might be more interesting than the server side. In client-side applications, it's easier to intuitively understand how faster concurrent processing makes a difference because you can see changes right away in the UI. Additionally, on the client side, there are many opportunities to interact with external APIs on familiar topics such as weather, news, finance, sports, etc.
+                Therefore, this time I want to try fetching and displaying real-time data from external APIs using concurrency on the client side. Initially, I was thinking about sports or earthquakes as themes and looking for free, real-time APIs related to them but couldn't find suitable ones, so I ended up choosing weather as the theme. Specifically, I'm considering using the following two external APIs:
+                    1. Air Quality - Air Quality Programmatic API https://aqicn.org/api/
+                    2. Weather - OpenWeatherMap https://openweathermap.org/api
+                *Statistically analyzing this information or preparing a dashboard with an excellent interface is outside the scope of this project.
+
+                Technology Stack:
+                I researched the necessary technology stack to achieve the above and tentatively decided on the most popular ones within the community. Next week, I plan to start building with these, and if I find better options, I'm open to changing flexibly.
+                1. Web framework: "Actix Web" is the most popular. It contains the concurrency library Tokio and WebSocket.
+                2. HTTP client: "Reqwest" is equipped with asynchronous support and operates on the Tokio runtime. It is used within Actix Web applications to retrieve data from external APIs.
+                3. Serialization/Deserialization framework: "Serde" is used to convert JSON data received from APIs into Rust structs.
+                While gaining insights into the relationship between weather and air quality is not the main theme, I might prepare a database if there's time.
+
+                The potential impediments moving forward could be catching up with the technology stack and APIs. Next week, I plan to touch on all the above at least once and identify what could become an significant impediment. As for this week, there are no particular improvements.
+            </p>
+        </section>
+
+        <section id="update">
+            <h2>Week 10</h2>
+            <p>
+                What did you do last week?
+                1. Web framework
+                I created a simple web server that performs asynchronous processing in Rust using the Rust web framework "actix-web." It responds to GET requests to the root URL (/) with "Hello, World!" and outputs the details of the request to the console, which is a very basic functionality.
+
+                2. API documents
+                I read the API documents for Air Quality and OpenWeather. I found out that the Air Quality API is available not only in JSON format but also as Map tiles. It seems convenient to be able to plot Air Quality on top of external map services like Google maps. Since the OpenWeather API is issued mainly in JSON format, I will be receiving the API by combining it with the HTTP client "Reqwest" and the JSON converter "Serde."
+
+                What do you plan to do this week?
+                I plan to implement tests for the above two APIs separately. If I have extra time, I will integrate it with the web framework. If I can do this, the core part of the Mini project will be completed.
+
+                Are there any impediments in your way?
+                No. However, since it's my first experience incorporating APIs, I'm a bit anxious.
+
+                Reflection on the process you used last week, how can you make the process work better?
+                I think my estimation for last week's tasks was too optimistic, and I overestimated the progress that could be made in a week. Looking back at last week, it's not that I did an incredibly large amount of work, but learning about unknown things requires starting from figuring out what needs to be done, which means time to think before actually starting the work. Therefore, I think I should design my plans with more leeway.
+
+                Compared to the times when it was enough just to keep watching videos, the time spent may be shorter now, but I feel that there's much more to think about.
+            </p>
+        </section>
+
+        <section id="update">
+            <h2>Week 11</h2>
+            <p>
+                Last week, I attempted to learn and implement serialization (converting Rust objects into JSON) and deserialization (converting JSON into Rust objects) using the Rust crates "serde", "serde_json", and "reqwest". I am still considering the definition of the data structures for Rust objects. This week, I want to successfully retrieve data from an API.
+                A challenge I encountered was the sudden influx of unexpected appointments, significantly reducing my coding time. While I can manage to squeeze in an hour or so of learning in a cafe, finding long periods to sit down and focus on coding has become difficult. Moving forward, a point of improvement would be to proactively prioritize securing substantial blocks of time at night for coding.
+            </p>
+        </section>
+
+        <section id="update">
+            <h2>Week 12</h2>
+            <p>
+                This week, I completed placing air quality tiles on Google Maps and fetching the weather for municipalities within the display range! I obtained personal API keys for Google Maps and OpenWeather. I won't show the code to keep the API keys hidden, but I was able to write everything in about 100 lines. I have attached a screenshot of the final result. The asynchronous processing was used with the `async` keyword to launch the HTTP server and when calling the Google Maps API.
+                ![Output Image](images/api_rust.png "Output Image")
+            </p>
+        </section>
+
+        <section id="update">
+            <h2>Week 13</h2>
+            <p>
+                Last week, I attempted to read papers on concurrency. I specified review articles on Google Scholar and searched for 'Concurrency review', then I opened the ones that were available for free.
+                I found out that much of the foundational theories and techniques in the study of concurrency were established by the 1980s, and it remains an active field of research today due to new technologies and applications (such as Deep Learning) being combined with it.
+                However, I faced a significant challenge as the level of discussion in the papers was far beyond my understanding, and I could hardly grasp anything. I have learned the basics of the topic through videos before, so I am thinking of looking for textbooks to read from this week.
+            </p>
+        </section>
+
+        <section id="update">
+            <h2>Week 14</h2>
+            <p>
+                Last week, I prepared for the Final Project Report. I reviewed what I have learned so far about concurrency and Rust/Go. I am considering a different summary report because the goal setting at the planning stage was unrealistic for exploring academic concurrency. Next week, I will complete the final project report.
+                There are no particular obstacles or points of improvement.
+            </p>
+        </section>
+
+        <section id="update">
+            <h2>Week 15</h2>
+            <p>
+                Last week and this week, I have been creating the Final report as planned. I am currently making sure to cover all the items posted by the professor on Piazza.
+                It's possible that I have spent too much time on creating it, which may not have been the best plan. It looks like it will end up being just compiling past documents and making final reflections.
+                There are no particular issues or points for improvement.
+            </p>
+        </section>
         
     </main>
     
